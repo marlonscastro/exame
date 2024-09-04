@@ -190,6 +190,13 @@
 
 	<script type="text/javascript">
 		// Activate tooltips
+		/**
+		 * ####### Legenda ########
+		 * mc - multiple choice (radiobox)
+		 * mm - multiple mark (checkbox)
+		 * dd - drag and drop
+		 * sq - select question (select)
+		 * */
 		$(function () {
 			$('[data-toggle="tooltip"]').tooltip();
 		})
@@ -199,7 +206,7 @@
 		let questions = [
 			{
 				id: 1,
-				type: "cc",
+				type: "mc",
 				text: "Você tem dois hosts Hyper-V chamados Host1 e Host2. Host1 possui uma máquina virtual Azure chamada VM1 que foi implantada usando um recurso Azure personalizado\
 Modelo gerente.\
 Você precisa mover VM1 para Host2.\
@@ -213,7 +220,7 @@ O que você deve fazer?",
 			},
 			{
 				id: 2,
-				type: "cc",
+				type: "mc",
 				text: "Você baixou um modelo do Azure Resource Manager para implantar inúmeras máquinas virtuais. O modelo é baseado em uma máquina virtual atual, mas deve ser adaptado para referenciar uma senha administrativa.\
 Você precisa ter certeza de que a senha não está armazenada em texto simples.\
 Você está se preparando para criar os componentes necessários para atingir seu objetivo.\
@@ -228,7 +235,7 @@ Selecione e coloque: <img src=\"./examtopics_files/0000300001.jpg\"></img>",
 			},
 			{
 				id: 3,
-				type: "cc",
+				type: "mc",
 				text: "Sua empresa possui um cluster do Azure Kubernetes Service (AKS) que você gerencia a partir de um dispositivo unido ao Azure AD. O cluster está localizado em um grupo de recursos.\
 Os desenvolvedores criaram um aplicativo chamado MyApp. MyApp foi empacotado em uma imagem de contêiner.\
 Você precisa implantar o arquivo de manifesto YAML para o aplicativo.\
@@ -241,7 +248,7 @@ Solução: Você instala a CLI do Azure no dispositivo e executa o comando kubec
 			},
 			{
 				id: 4,
-				type: "cc",
+				type: "mc",
 				text: "Sua empresa possui um cluster do Azure Kubernetes Service (AKS) que você gerencia a partir de um dispositivo unido ao Azure AD. O cluster está localizado em um grupo de recursos.\
 Os desenvolvedores criaram um aplicativo chamado MyApp. MyApp foi empacotado em uma imagem de contêiner.\
 Você precisa implantar o arquivo de manifesto YAML para o aplicativo.\
@@ -254,7 +261,7 @@ Solução: Você instala o cliente docker no dispositivo e executa o comando doc
 			},
 			{
 				id: 5,
-				type: "cc",
+				type: "mc",
 				text: "Sua empresa possui um aplicativo web chamado WebApp1.\
 Você usa o SDK do WebJobs para projetar uma tarefa em segundo plano do App Service acionada que invoca automaticamente uma função no código toda vez que novos dados são recebidos em uma fila.\
 Você está se preparando para configurar os processos de serviço de um item de dados de fila.<br>\
@@ -268,7 +275,7 @@ Qual dos seguintes é o serviço que você deve usar?",
 			},
 			{
 				id: 6,
-				type: "cc",
+				type: "mc",
 				text: "Sua empresa tem uma assinatura do Azure.\
 Você precisa implantar várias máquinas virtuais do Azure na assinatura usando modelos do Azure Resource Manager (ARM). As máquinas virtuais serão incluídas em um único conjunto de disponibilidade.\
 Você precisa garantir que o modelo ARM permita que o maior número possível de máquinas virtuais permaneça acessível em caso de falha ou manutenção do tecido.\
@@ -282,7 +289,7 @@ Você precisa garantir que o modelo ARM permita que o maior número possível de
 			},
 			{
 				id: 7,
-				type: "cc",
+				type: "mc",
 				text: "Você está criando uma conta do Azure Cosmos DB que faz uso da API SQL. Os dados serão adicionados à conta todos os dias por um aplicativo da web.\
 Você precisa garantir que uma notificação por e-mail seja enviada quando as informações forem recebidas de dispositivos IoT e que o custo de computação seja reduzido.\
 Você decide implantar um aplicativo de função.\
