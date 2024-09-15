@@ -109,6 +109,13 @@
 												<span id="alternative3">D</span>
 											</span>
 										</li>
+										<li class="multi-choice-item">
+											<span class="multi-choice-letter" data-choice-letter="E">
+												<input type="radio" id="q4" name="selecao" aria-label="radio"
+													checked="false" />
+												<span id="alternative4">E</span>
+											</span>
+										</li>										
 									</ul>
 								</div>
 
@@ -187,6 +194,7 @@
 	<script src="./examtopics_files/isotope.pkgd.min.js.download"></script>
 	<!-- imagesloaded.pkgd.min js -->
 
+	<script src="./examtopics_files/questoes.js"></script>
 
 	<script type="text/javascript">
 		// Activate tooltips
@@ -203,112 +211,13 @@
 		let countQuestions = 0
 		let actualQuestion = { id: 0 }
 		let answers = []
-		let questions = [
-			{
-				id: 1,
-				type: "mc",
-				text: "Você tem dois hosts Hyper-V chamados Host1 e Host2. Host1 possui uma máquina virtual Azure chamada VM1 que foi implantada usando um recurso Azure personalizado\
-Modelo gerente.\
-Você precisa mover VM1 para Host2.\
-O que você deve fazer?",
-				alternatives: [
-					{ description: "A: Na lâmina de gerenciamento de atualização, clique em Habilitar.", correct: false },
-					{ description: "B: Da lâmina Visão geral, mova a VM1 para uma assinatura diferente.", correct: false },
-					{ description: "C: A partir da lâmina Redeploy, clique em Redeploy.", correct: true },
-					{ description: "D: A partir da lâmina Perfil, modifique o local de uso.", correct: false }
-				]
-			},
-			{
-				id: 2,
-				type: "mc",
-				text: "Você baixou um modelo do Azure Resource Manager para implantar inúmeras máquinas virtuais. O modelo é baseado em uma máquina virtual atual, mas deve ser adaptado para referenciar uma senha administrativa.\
-Você precisa ter certeza de que a senha não está armazenada em texto simples.\
-Você está se preparando para criar os componentes necessários para atingir seu objetivo.\
-Qual das seguintes opções você deve criar para atingir seu objetivo? Responda arrastando a opção correta da lista para a área de resposta.\
-Selecione e coloque: <img src=\"./examtopics_files/0000300001.jpg\"></img>",
-				alternatives: [
-					{ description: "A. An Azure Storage Account and An Azure Policy", correct: false },
-					{ description: "B. A Backup Policy and An Azure Key Vault", correct: false },
-					{ description: "C. An Azure Key Vault and An Access Policy", correct: true },
-					{ description: "D: An Azure Storage Account and A Backup Policy", correct: false }
-				]
-			},
-			{
-				id: 3,
-				type: "mc",
-				text: "Sua empresa possui um cluster do Azure Kubernetes Service (AKS) que você gerencia a partir de um dispositivo unido ao Azure AD. O cluster está localizado em um grupo de recursos.\
-Os desenvolvedores criaram um aplicativo chamado MyApp. MyApp foi empacotado em uma imagem de contêiner.\
-Você precisa implantar o arquivo de manifesto YAML para o aplicativo.\
-Solução: Você instala a CLI do Azure no dispositivo e executa o comando kubectl apply -f myapp.yaml.\
-<br>Isso atende ao objetivo?",
-				alternatives: [
-					{ description: "A. Sim", correct: true },
-					{ description: "B. Não", correct: false }
-				]
-			},
-			{
-				id: 4,
-				type: "mc",
-				text: "Sua empresa possui um cluster do Azure Kubernetes Service (AKS) que você gerencia a partir de um dispositivo unido ao Azure AD. O cluster está localizado em um grupo de recursos.\
-Os desenvolvedores criaram um aplicativo chamado MyApp. MyApp foi empacotado em uma imagem de contêiner.\
-Você precisa implantar o arquivo de manifesto YAML para o aplicativo.\
-Solução: Você instala o cliente docker no dispositivo e executa o comando docker run - it microsoft/azure-cli:0.10.17.\
-<br>Isso atende ao objetivo?",
-				alternatives: [
-					{ description: "A. Sim", correct: false },
-					{ description: "B. Não", correct: true }
-				]
-			},
-			{
-				id: 5,
-				type: "mc",
-				text: "Sua empresa possui um aplicativo web chamado WebApp1.\
-Você usa o SDK do WebJobs para projetar uma tarefa em segundo plano do App Service acionada que invoca automaticamente uma função no código toda vez que novos dados são recebidos em uma fila.\
-Você está se preparando para configurar os processos de serviço de um item de dados de fila.<br>\
-Qual dos seguintes é o serviço que você deve usar?",
-				alternatives: [
-					{ description: "A. Aplicativos Lógicos", correct: false },
-					{ description: "B. WebJobs", correct: true },
-					{ description: "C. Fluxo", correct: false },
-					{ description: "D. Funções", correct: false }
-				]
-			},
-			{
-				id: 6,
-				type: "mc",
-				text: "Sua empresa tem uma assinatura do Azure.\
-Você precisa implantar várias máquinas virtuais do Azure na assinatura usando modelos do Azure Resource Manager (ARM). As máquinas virtuais serão incluídas em um único conjunto de disponibilidade.\
-Você precisa garantir que o modelo ARM permita que o maior número possível de máquinas virtuais permaneça acessível em caso de falha ou manutenção do tecido.\
-<br>Qual das opções a seguir é o valor que você deve configurar para a propriedade platformUpdateDomainCount?",
-				alternatives: [
-					{ description: "A. 10", correct: false },
-					{ description: "B. 20", correct: true },
-					{ description: "C. 30", correct: false },
-					{ description: "D. 40", correct: false }
-				]
-			},
-			{
-				id: 7,
-				type: "mc",
-				text: "Você está criando uma conta do Azure Cosmos DB que faz uso da API SQL. Os dados serão adicionados à conta todos os dias por um aplicativo da web.\
-Você precisa garantir que uma notificação por e-mail seja enviada quando as informações forem recebidas de dispositivos IoT e que o custo de computação seja reduzido.\
-Você decide implantar um aplicativo de função.\
-Qual das seguintes opções você deve configurar o aplicativo de função a ser usado? Responda arrastando as opções corretas da lista para a área de resposta.\
-Selecione e coloque: <img src=\"examtopics_files/0000900001.jpg\"></img>",
-				alternatives: [
-					{ description: "A. Axure Event Hub and Azure Cosmos DB Conector", correct: false },
-					{ description: "B. Consumption Plan and SendGrid binding", correct: true },
-					{ description: "C. Consumption Plan and SendGrid action", correct: false },
-					{ description: "D. Azure Cosmos DB Conector and SendGrid action", correct: false }
-				]
-			}										
-		]
+		
 		function clearRadios() {
 			var radios = $('input:radio')
 			radios.prop("checked", false)
 		}
 		function getQuestion(i) {
-			for (let x = 0; x < 4; x++) {
+			for (let x = 0; x < 5; x++) {
 				$(`#alternative${x}`).parent().parent().removeClass('d-none')
 			}
 			const totalAlternatives = questions[i].alternatives.length
@@ -320,7 +229,7 @@ Selecione e coloque: <img src=\"examtopics_files/0000900001.jpg\"></img>",
 			questions[i].alternatives.map((alternative, x) => {
 				$(`#alternative${x}`).text(questions[i].alternatives[x].description)
 			})
-			for (let x = totalAlternatives; x < 4; x++) {
+			for (let x = totalAlternatives; x < 5; x++) {
 				$(`#alternative${x}`).parent().parent().addClass('d-none')
 			}
 			actualQuestion.id = questions[i].id
