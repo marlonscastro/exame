@@ -10,7 +10,7 @@
 	<!--<base href="https://www.examtopics.com/exams/microsoft/az-204/view/1/">-->
 	<!-- meta tag -->
 
-	<title>AZ-204 Exam - Free Actual Q&amp;As, Page 1 | ExamTopics</title>
+	<title>AZ-204 Exame</title>
 	<meta name="description" content="Free, Actual and Latest Practice Test for those who are preparing for Developing Solutions for Microsoft Azure
 		.">
 	<!-- responsive tag -->
@@ -331,6 +331,7 @@
 
 
 		$(document).ready(function () {
+			console.log(questions.length)
 			getQuestion(0)
 			$("#prevBtn").removeClass("btn-success").addClass("btn-secondary");
 			actualQuestion.id = questions[0].id

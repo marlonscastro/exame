@@ -854,5 +854,367 @@ Selecione e coloque: <img src=\"examtopics_files/0000900001.jpg\"></img>",
             container = database.create_container_if_not_exists(<br>\
             id=container_name, partition_key=PartitionKey(path=\"/lastName\"), offer_throughput=400 )", correct: true },
         ]
-    },            
+    },
+    {
+        id: 344,
+        type: "mc",
+        text: "Você está desenvolvendo uma solução de rastreamento de inventário. A solução inclui um aplicativo Azure Function contendo várias funções acionadas pelo Azure Cosmos DB. Você planeja implantar a solução em várias regiões do Azure.\
+<br><br>\
+        A solução deve atender aos seguintes requisitos:<br>\
+        <br>\
+        • Os resultados do item do Azure Cosmos DS devem retornar a versão mais recente confirmada de um item.<br>\
+        • Os itens gravados no Azure Cosmos DB devem fornecer garantias de ordenação.<br>\
+        <br><br>\
+        Você precisa configurar o nível de consistência para as implantações do Azure Cosmos DB.<br>\
+        <br><br>\
+        Qual nível de consistência você deve usar?",
+        alternatives: [
+            { description: "A. prefixo consistente", correct: false },
+            { description: "B. eventual", correct: false },
+            { description: "C. obsolescência limitada", correct: false },
+            { description: "D. forte", correct: true },
+            { description: "E. sessão", correct: false },
+        ]
+    },   
+    {
+        id: 347,
+        type: "mc",
+        text: "Você cria e publica um novo aplicativo Web do Azure App Service.\
+        A autenticação e autorização do usuário devem usar o Azure Active Directory (Azure AD).\
+        Você precisa configurar a autenticação e a autorização.<br><br>\
+        O que você deve fazer primeiro?",
+        alternatives: [
+            { description: "A. Adicione um provedor de identidade.", correct: true },
+            { description: "B. Mapeie um nome DNS personalizado existente.", correct: false },
+            { description: "C. Crie e configure uma nova configuração de aplicativo.", correct: false },
+            { description: "D. Adicione um certificado privado.", correct: false },
+            { description: "E. Crie e configure uma identidade gerenciada.", correct: false },
+        ]
+    },
+    {
+        id: 349,
+        type: "mc",
+        text: "Você tem um aplicativo de console baseado em contêiner Linux que carrega arquivos de imagem de sites de clientes em todo o mundo. Um sistema de back-end que é executado em máquinas virtuais do Azure processa as imagens usando a API do Azure Blobs.\
+        Você não tem permissão para fazer alterações no aplicativo.\
+        Alguns sites de clientes têm apenas conexões de internet baseadas em telefone.\
+        Você precisa configurar o aplicativo de console para acessar as imagens.<br><br>\
+        O que você deve usar?",
+        alternatives: [
+            { description: "A. Azure BlobFuse", correct: true },
+            { description: "B. Discos Azure", correct: false },
+            { description: "C. Suporte ao Azure Storage Network File System (NFS) 3.0", correct: false },
+            { description: "D. Arquivos do Azure", correct: false },
+        ]
+    },
+    {
+        id: 353,
+        type: "mc",
+        text: "Você cria um banco de dados Azure Cosmos DB para NoSQL.\
+        Você planeja usar a API do Azure Cosmos DB .NET SDK v3 para NoSQL para carregar os seguintes arquivos:<br>\
+        <img src=\"https://img.examtopics.com/az-204/image508.png\"></img><br>\
+        Você recebe a seguinte mensagem de erro ao carregar os arquivos: “<b>413 Entity too large</b>.\
+        Você precisa determinar quais arquivos você pode carregar no banco de dados Azure Cosmos DB para NoSQL.<br>\
+        Quais arquivos você pode carregar?",
+        alternatives: [
+            { description: "A. Arquivo1, Arquivo2, Arquivo3, Arquivo4 e Arquivo5", correct: false },
+            { description: "B. Somente Arquivo1 e Arquivo2", correct: true },
+            { description: "C. Somente Arquivo1, Arquivo2 e Arquivo3", correct: false },
+            { description: "D. Somente Arquivo1, Arquivo2, Arquivo3 e Arquivo4", correct: false },
+            { description: "E. Somente arquivo 1", correct: false },
+        ]
+    }, 
+    {
+        id: 401,
+        type: "mc",
+        text: "Você está desenvolvendo um aplicativo Java que usa o Cassandra para armazenar dados de chave e valor. Você planeja usar um novo recurso do Azure Cosmos DB e a\
+        API do Cassandra no aplicativo. Você cria um grupo do Azure Active Directory (Azure AD) chamado Cosmos DB Creators para habilitar o provisionamento de contas, bancos de dados e contêineres do Azure Cosmos.\
+        O grupo do Azure AD não deve conseguir acessar as chaves necessárias para acessar os dados.\
+        Você precisa restringir o acesso ao grupo do Azure AD.<br><br>\
+        Qual controle de acesso baseado em função você deve usar?",
+        alternatives: [
+            { description: "A. DocumentDB Accounts Contributor", correct: false },
+            { description: "B. Cosmos Backup Operator", correct: false },
+            { description: "C. Cosmos DB Operator", correct: true },
+            { description: "D. Cosmos DB Account Reader", correct: false },
+        ]
+    },     
+    {
+        id: 402,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um site que será executado como um Azure Web App. Os usuários serão autenticados usando suas credenciais do Azure Active Directory (Azure AD).\
+        Você planeja atribuir aos usuários um dos seguintes níveis de permissão para o site: administrador, normal e leitor. A associação ao grupo do Azure AD de um usuário deve ser usada para determinar o nível de permissão.\
+        Você precisa configurar a autorização.<br>\
+        <b>Solução: configure o Azure Web App para o site para permitir apenas solicitações autenticadas e exigir logon do Azure AD.</b><br><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },                   
+    {
+        id: 403,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um site que será executado como um Azure Web App. Os usuários serão autenticados usando suas credenciais do Azure Active Directory (Azure AD).\
+        Você planeja atribuir aos usuários um dos seguintes níveis de permissão para o site: administrador, normal e leitor. A associação de grupo do Azure AD de um usuário deve ser usada para determinar o nível de permissão.\
+        Você precisa configurar a autorização.<br>\
+        Solução:<br>\
+        ✑ Crie um novo aplicativo do Azure AD. No manifesto do aplicativo, defina o valor da opção groupMembershipClaims como All.<br>\
+        ✑ No site, use o valor da reivindicação groups do JWT para o usuário determinar as permissões.<br><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: true },
+            { description: "B. Não", correct: false },
+        ]
+    },    
+    {
+        id: 404,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um site que será executado como um Azure Web App. Os usuários serão autenticados usando suas credenciais do Azure Active Directory (Azure AD).\
+        Você planeja atribuir aos usuários um dos seguintes níveis de permissão para o site: administrador, normal e leitor. A associação ao grupo do Azure AD de um usuário deve ser usada para determinar o nível de permissão.\
+        Você precisa configurar a autorização.<br>\
+        Solução:<br>\
+        ✑ Crie um novo aplicativo do Azure AD. No manifesto do aplicativo, defina as funções do aplicativo que correspondem aos níveis de permissão necessários para o aplicativo.<br>\
+        ✑ Atribua o grupo do Azure AD apropriado a cada função. No site, use o valor da declaração de funções do JWT para o usuário determinar as permissões.<br><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: true },
+            { description: "B. Não", correct: false },
+        ]
+    },   
+    {
+        id: 409,
+        type: "mc",
+        text: "Você tem um aplicativo que inclui um aplicativo Web do Azure e vários aplicativos de funções do Azure. Os segredos do aplicativo, incluindo cadeias de conexão e certificados, são armazenados no Azure Key Vault.\
+        Os segredos não devem ser armazenados no aplicativo ou no ambiente de tempo de execução do aplicativo. As alterações no Azure Active Directory (Azure AD) devem ser minimizadas.\
+        Você precisa projetar a abordagem para carregar segredos do aplicativo.<br><br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Crie uma única Identidade Gerenciada atribuída ao usuário com permissão para acessar o Key Vault e configure cada Serviço de Aplicativo para usar essa Identidade Gerenciada.", correct: true },
+            { description: "B. Crie uma única entidade de serviço do Azure AD com permissão para acessar o Key Vault e usar um segredo do cliente de dentro dos Serviços de Aplicativo para acessar o Key Vault.", correct: false },
+            { description: "C. Crie um sistema com Identidade Gerenciada atribuída em cada Serviço de Aplicativo com permissão para acessar o Key Vault.", correct: false },
+            { description: "D. Crie uma entidade de serviço do Azure AD com permissões para acessar o Key Vault para cada Serviço de Aplicativo e use um certificado de dentro dos Serviços de Aplicativo para acessar o Key Vault.", correct: false },
+        ]
+    },
+    {
+        id: 410,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um site de gerenciamento de documentos de registros médicos. O site é usado para armazenar cópias digitalizadas de formulários de admissão de pacientes.\
+        Se os formulários de admissão armazenados forem baixados do armazenamento por terceiros, o conteúdo dos formulários não deve ser comprometido.\
+        Você precisa armazenar os formulários de admissão de acordo com os requisitos.<br>\
+        Solução:<br>\
+        1. Crie uma chave do Azure Key Vault chamada skey.<br>\
+        2. Criptografe os formulários de admissão usando a parte da chave pública de skey.<br>\
+        3. Armazene os dados criptografados no armazenamento de Blobs do Azure.<br><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: true },
+            { description: "B. Não", correct: false },
+        ]
+    },
+    {
+        id: 411,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um site de gerenciamento de documentos de registros médicos. O site é usado para armazenar cópias digitalizadas de formulários de admissão de pacientes.\
+        Se os formulários de admissão armazenados forem baixados do armazenamento por terceiros, o conteúdo dos formulários não deve ser comprometido.\
+        Você precisa armazenar os formulários de admissão de acordo com os requisitos.\
+        Solução:<br>\
+        1. Crie um banco de dados do Azure Cosmos DB com o Storage Service Encryption habilitado<br>.\
+        2. Armazene os formulários de admissão no banco de dados do Azure Cosmos DB.<br><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },   
+    {
+        id: 412,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um site de gerenciamento de documentos de registros médicos. O site é usado para armazenar cópias digitalizadas de formulários de admissão de pacientes.\
+        Se os formulários de admissão armazenados forem baixados do armazenamento por terceiros, o conteúdo dos formulários não deve ser comprometido.\
+        Você precisa armazenar os formulários de admissão de acordo com os requisitos.<br>\
+        <b>Solução: armazene os formulários de admissão como segredos do Azure Key Vault.<b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },    
+    {
+        id: 414,
+        type: "mc",
+        text: "Sua empresa está desenvolvendo uma API do Azure hospedada no Azure.\
+        Você precisa implementar a autenticação para a API do Azure para acessar outros recursos do Azure. Você tem os seguintes requisitos:<br>\
+        ✑ Todas as chamadas de API devem ser autenticadas.<br>\
+        ✑ Os chamadores da API não devem enviar credenciais para a API.<br><br>\
+        Qual mecanismo de autenticação você deve usar?",
+        alternatives: [
+            { description: "A. Básico", correct: false },
+            { description: "B. Anônimo", correct: false },
+            { description: "C. Identidade gerenciada", correct: true },
+            { description: "D. Certificado do cliente", correct: false },
+        ]
+    },
+    {
+        id: 416,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.<br>\
+        Você desenvolve soluções do Azure.<br>\
+        Você deve conceder a uma máquina virtual (VM) acesso a grupos de recursos específicos no Azure Resource Manager.<br>\
+        Você precisa obter um token de acesso do Azure Resource Manager.<br>\
+        <b>Solução: use um certificado X.509 para autenticar a VM com o Azure Resource Manager.</b><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    }, 
+    {
+        id: 417,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.<br>\
+        Você desenvolve soluções do Azure.<br>\
+        Você deve conceder a uma máquina virtual (VM) acesso a grupos de recursos específicos no Azure Resource Manager.<br>\
+        Você precisa obter um token de acesso do Azure Resource Manager.<br>\
+        <b>Solução: use a função de controle de acesso baseado em função do Reader (RBAC) para autenticar a VM com o Azure Resource Manager.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },
+    {
+        id: 419,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um site que será executado como um Azure Web App. Os usuários serão autenticados usando suas credenciais do Azure Active Directory (Azure AD).\
+        Você planeja atribuir aos usuários um dos seguintes níveis de permissão para o site: administrador, normal e leitor. A associação de grupo do Azure AD de um usuário deve ser usada para determinar o nível de permissão.\
+        Você precisa configurar a autorização.<br>\
+        Solução:<br>\
+        ✑ Configure e use a Autenticação Integrada do Windows no site.<br>\
+        ✑ No site, consulte a API do Microsoft Graph para carregar os grupos dos quais o usuário é membro.<br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },  
+    {
+        id: 420,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.<br>\
+        Você desenvolve soluções do Azure.<br>\
+        Você deve conceder a uma máquina virtual (VM) acesso a grupos de recursos específicos no Azure Resource Manager.<br>\
+        Você precisa obter um token de acesso do Azure Resource Manager.<br>\
+        <b>Solução: execute o cmdlet Invoke-RestMethod para fazer uma solicitação à identidade gerenciada local para o ponto de extremidade de recursos do Azure.</b><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: true },
+            { description: "B. Não", correct: false },
+        ]
+    },  
+    {
+        id: 422,
+        type: "mc",
+        text: "Você desenvolve um aplicativo que permite que os usuários carreguem fotos e vídeos no armazenamento do Azure. O aplicativo usa uma chamada de API REST de armazenamento para carregar a mídia em uma conta de armazenamento de blobs chamada Account1. Você tem contêineres de armazenamento de blobs chamados Container1 e Container2.\
+        O carregamento de vídeos ocorre de forma irregular.\
+        Você precisa copiar blobs específicos do Container1 para o Container2 quando um novo vídeo é carregado.<br><br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Copie blobs para o Container2 usando a operação Put Blob da API REST do Blob Service", correct: false },
+            { description: "B. Crie um tópico Event Grid que use o cmdlet Start-AzureStorageBlobCopy", correct: true },
+            { description: "C. Use o AzCopy com o switch Snapshot para copiar blobs para o Container2", correct: false },
+            { description: "D. Baixe o blob para uma máquina virtual e depois carregue o blob para o Container2", correct: false },
+        ]
+    }, 
+    {
+        id: 423,
+        type: "mc",
+        text: "Você está desenvolvendo um site ASP.NET Core que usa o Azure FrontDoor. O site é usado para criar conjuntos de dados meteorológicos personalizados para pesquisadores. Os conjuntos de dados são baixados pelos usuários como arquivos Comma Separated Value (CSV). Os dados são atualizados a cada 10 horas.\
+        Arquivos específicos devem ser expurgados do cache do FrontDoor com base nos valores do Response Header.\
+        Você precisa expurgar ativos individuais do cache do Front Door.<br><br>\
+        Que tipo de expurgo de cache você deve usar?",
+        alternatives: [
+            { description: "A. single path", correct: true },
+            { description: "B. wildcard", correct: false },
+            { description: "C. root domain", correct: false },
+        ]
+    }, 
+    {
+        id: 424,
+        type: "mc",
+        text: "Sua empresa está desenvolvendo uma API do Azure.\
+        Você precisa implementar a autenticação para a API do Azure. Você tem os seguintes requisitos:\
+        Todas as chamadas de API devem ser seguras.<br><br>\
+        ✑ Os chamadores da API não devem enviar credenciais para a API.<br>\
+        Qual mecanismo de autenticação você deve usar?",
+        alternatives: [
+            { description: "A. Básico", correct: false },
+            { description: "B. Anônimo", correct: false },
+            { description: "C. Identidade gerenciada", correct: true },
+            { description: "D. Certificado do cliente", correct: false },
+        ]
+    },   
+    {
+        id: 425,
+        type: "mc",
+        text: "Você é um desenvolvedor de uma empresa de SaaS que oferece muitos serviços web.\
+        Todos os serviços web da empresa devem atender aos seguintes requisitos:<br>\
+        ✑ Usar o API Management para acessar os serviços<br>\
+        ✑ Usar o OpenID Connect para autenticação<br>\
+        ✑ Impedir uso anônimo<br><br>\
+        Uma auditoria de segurança recente descobriu que vários serviços web podem ser chamados sem nenhuma autenticação.<br>\
+        Qual política de API Management você deve implementar?",
+        alternatives: [
+            { description: "A. jsonp", correct: false },
+            { description: "B. authentication-certificate", correct: false },
+            { description: "C. check-header", correct: false },
+            { description: "D. validate-jwt ", correct: true },
+        ]
+    },
+    {
+        id: 431,
+        type: "mc",
+        text: "Você desenvolve e implanta um aplicativo Azure Logic que chama um aplicativo Azure Function. O aplicativo Azure Function inclui uma definição OpenAPI (Swagger) e usa uma\
+        conta de armazenamento Azure Blob. Todos os recursos são protegidos usando o Azure Active Directory (Azure AD).<br>\
+        O aplicativo Azure Logic deve acessar com segurança a conta de armazenamento Azure Blob. Os recursos do Azure AD devem permanecer se o aplicativo Azure Logic for excluído.<br>\
+        Você precisa proteger o aplicativo Azure Logic.<br><br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Crie uma identidade gerenciada atribuída ao usuário e atribua controles de acesso baseados em funções.", correct: true },
+            { description: "B. Crie uma função personalizada do Azure AD e atribua a função à conta de armazenamento de Blobs do Azure.", correct: false },
+            { description: "C. Crie um Azure Key Vault e emita um certificado de cliente.", correct: false },
+            { description: "D. Crie uma identidade gerenciada atribuída pelo sistema e emita um certificado de cliente.", correct: false },
+            { description: "E. Crie uma função personalizada do Azure AD e atribua controles de acesso baseados em função.", correct: false },
+        ]
+    },   
+    {
+        id: 437,
+        type: "mc",
+        text: "Você implanta um aplicativo Web do Azure App Service. Você cria um registro de aplicativo para o aplicativo no Azure Active Directory (Azure AD) e no Twitter.\
+        O aplicativo deve autenticar usuários e deve usar SSL para todas as comunicações. O aplicativo deve usar o Twitter como o provedor de identidade.<br>\
+        Você precisa validar a solicitação do Azure AD no código do aplicativo.<br><br>\
+        O que você deve validar?",
+        alternatives: [
+            { description: "A. Cabeçalho do token de ID", correct: false },
+            { description: "B. Assinatura do token de ID", correct: true },
+            { description: "C. Código de resposta HTTP", correct: false },
+            { description: "D. ID do inquilino", correct: false },
+        ]
+    },                                              
 ]
