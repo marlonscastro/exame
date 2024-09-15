@@ -312,7 +312,19 @@ Selecione e coloque: <img src=\"examtopics_files/0000900001.jpg\"></img>",
 					{ description: "C. Forneça a todos os desenvolvedores a chave de acesso para a conta de armazenamento do Azure Blob. Atualize a API para incluir o carimbo de data/hora do Tempo Universal Coordenado (UTC) para o cabeçalho da solicitação.", correct: false },
 					{ description: "D. Conceda a todos os desenvolvedores acesso à conta de armazenamento de Blobs do Azure atribuindo funções de controle de acesso baseado em função (RBAC).", correct: false }
 				]
-			}										
+			},
+			{
+				id: 201,
+				type: "mc",
+				text: "Você tem uma nova assinatura do Azure. Você está desenvolvendo um site interno para que os funcionários visualizem dados confidenciais. O site usa o Azure Active Directory (AzureAD) para autenticação. Você precisa implementar a autenticação multifator para o site. Quais duas ações você deve executar? Cada resposta correta apresenta parte da solução. OBSERVAÇÃO: Cada seleção correta vale um ponto.",
+				alternatives: [
+					{ description: "A. Configure o site para usar o Azure AD B2C.", correct: false },
+					{ description: "B. No Azure AD, crie uma nova política de acesso condicional.", correct: true },
+					{ description: "C. Atualize para o Azure AD Premium.", correct: false },
+					{ description: "D. No Azure AD, habilite o proxy de aplicativo.", correct: false }
+					{ description: "E. No acesso condicional do Azure AD, habilite a política de linha de base.", correct: false }
+				]
+			}											
 		]
 		function clearRadios() {
 			var radios = $('input:radio')
