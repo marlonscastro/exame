@@ -301,6 +301,17 @@ Selecione e coloque: <img src=\"examtopics_files/0000900001.jpg\"></img>",
 					{ description: "C. Consumption Plan and SendGrid action", correct: false },
 					{ description: "D. Azure Cosmos DB Conector and SendGrid action", correct: false }
 				]
+			},
+			{
+				id: 200,
+				type: "mc",
+				text: "Uma equipe de desenvolvimento está criando uma nova API REST. A API armazenará dados no armazenamento de Blobs do Azure. Você planeja implantar a API no Azure App Service. Os desenvolvedores devem acessar a conta de armazenamento de Blobs do Azure para desenvolver a API pelos próximos dois meses. A conta de armazenamento de Blobs do Azure não deve ser acessível pelos desenvolvedores após o período de dois meses. Você precisa conceder aos desenvolvedores acesso à conta de armazenamento de Blobs do Azure. O que você deve fazer?: ",
+				alternatives: [
+					{ description: "A. Gere uma assinatura de acesso compartilhado (SAS) para a conta de armazenamento de Blobs do Azure e forneça a SAS a todos os desenvolvedores.", correct: false },
+					{ description: "B. Crie e aplique uma nova política de gerenciamento de ciclo de vida para incluir um valor de data do último acesso. Aplique a política à conta de armazenamento do Azure Blob.", correct: true },
+					{ description: "C. Forneça a todos os desenvolvedores a chave de acesso para a conta de armazenamento do Azure Blob. Atualize a API para incluir o carimbo de data/hora do Tempo Universal Coordenado (UTC) para o cabeçalho da solicitação.", correct: false },
+					{ description: "D. Conceda a todos os desenvolvedores acesso à conta de armazenamento de Blobs do Azure atribuindo funções de controle de acesso baseado em função (RBAC).", correct: false }
+				]
 			}										
 		]
 		function clearRadios() {
