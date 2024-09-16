@@ -32,7 +32,6 @@
 </head>
 
 <body class="home2">
-	<!-- Modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 		aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -54,22 +53,37 @@
 	</div>
 	<div class="sec-spacer" style="padding: 20px 0px; ">
 		<div class="container">
-			<!-- exam-view47 -->
 			<div class="row">
 				<div class="col-12">
 					<div class="questions-container">
-						<!-- exam-view48 -->
-						<!-- Question -->
-						<!-- <div class="page-navigation-bar" style="padding-bottom:20px;"> -->
-							<div class="col-12" style="padding-bottom:0px;margin-bottom:0px;">
+						<div style="display: flex; justify-content: space-between;">
+							<div style="padding-bottom:0px;margin-bottom:0px;">
 								<div id="prevBtn" class="btn btn-success pull-right">Prev Question</div>
 								<div id="nextBtn" class="btn btn-success pull-right">Next Question</div>
 							</div>
-						<!-- </div>						 -->
+							<div>
+								<span id="qtdQ">
+									<select disabled>
+										<option selected value="0">50 Questões</option>
+										<option value="1">100 Questões</option>
+										<option value="2">200 Questões</option>
+									</select>
+								</span>
+								<span id="sel">
+									<select disabled>
+										<option selected value="0">Multipla escolha</option>
+										<option value="1">Segunda opção</option>
+										<option value="2">Terceira opção</option>
+									</select>
+								</span>
+							</div>
+						</div>
 						<div class="card exam-question-card">
-								
-							<div class="card-header text-white bg-primary">
+
+							<div class="card-header text-white bg-primary"
+								style="display: flex; justify-content: space-between;">
 								<span id="numQuestion">Questão 1</span>
+								<span id="teste">Multipla escolha (01 alternativa correta)</span>
 							</div>
 							<div class="card-body question-body" data-id="816230">
 								<p id="questao" class="card-text">
@@ -120,6 +134,13 @@
 												<input type="radio" id="q4" name="selecao" aria-label="radio"
 													checked="false" />
 												<span id="alternative4">E</span>
+											</span>
+										</li>
+										<li class="multi-choice-item">
+											<span class="multi-choice-letter" data-choice-letter="F">
+												<input type="radio" id="q5" name="selecao" aria-label="radio"
+													checked="false" />
+												<span id="alternative5">E</span>
 											</span>
 										</li>										
 									</ul>
@@ -211,25 +232,26 @@
 		let countQuestions = 0
 		let actualQuestion = { id: 0 }
 		let answers = []
-		
+		let MAX_QUESTIONS = 6
+
 		function clearRadios() {
 			var radios = $('input:radio')
 			radios.prop("checked", false)
 		}
 		function getQuestion(i) {
-			for (let x = 0; x < 5; x++) {
+			for (let x = 0; x < MAX_QUESTIONS; x++) {
 				$(`#alternative${x}`).parent().parent().removeClass('d-none')
 			}
 			const totalAlternatives = questions[i].alternatives.length
 			clearRadios()
 			var titleSpan = document.getElementById('numQuestion')
-			titleSpan.innerHTML = "Questão #" + (countQuestions + 1)
+			titleSpan.innerHTML = questions[i].id + " - Questão #" + (countQuestions + 1) + " de " + questions.length
 			var txt = document.getElementById('questao')
 			txt.innerHTML = questions[i].text
 			questions[i].alternatives.map((alternative, x) => {
 				$(`#alternative${x}`).text(questions[i].alternatives[x].description)
 			})
-			for (let x = totalAlternatives; x < 5; x++) {
+			for (let x = totalAlternatives; x < MAX_QUESTIONS; x++) {
 				$(`#alternative${x}`).parent().parent().addClass('d-none')
 			}
 			actualQuestion.id = questions[i].id
@@ -245,7 +267,6 @@
 				answers.splice(index, 1, questionSelected)
 			}
 		}
-
 
 		$('input:radio').click(function () {
 			const radioId = $(this).attr('id').split('')[1]
@@ -267,8 +288,11 @@
 
 				$('li').removeClass('correct-hidden').removeClass('correct-choice')
 				hideSolution()
-				const index = questions[countQuestions].alternatives.findIndex(i => i.correct === true)
-				$('li')[index].classList.add('correct-hidden')
+				questions[countQuestions].alternatives.map((v, k) => {
+					if(v.correct){
+						$('li')[k].classList.add('correct-hidden')
+					}
+				})
 
 				if (answers[countQuestions]) {
 					if (questions[countQuestions].id === answers[countQuestions].id) {
@@ -277,8 +301,6 @@
 					}
 				}
 			}
-
-
 		})
 		$('#nextBtn').click(function () {
 			if (countQuestions < questions.length - 1) {
@@ -287,8 +309,11 @@
 				getQuestion(countQuestions)
 				$('li').removeClass('correct-hidden').removeClass('correct-choice')
 				hideSolution()
-				const index = questions[countQuestions].alternatives.findIndex(i => i.correct === true)
-				$('li')[index].classList.add('correct-hidden')
+				questions[countQuestions].alternatives.map((v, k) => {
+					if(v.correct){
+						$('li')[k].classList.add('correct-hidden')
+					}
+				})
 
 				if (answers[countQuestions]) {
 					if (questions[countQuestions].id === answers[countQuestions].id) {
@@ -299,6 +324,7 @@
 
 			}
 			if (countQuestions > questions.length - 1) {
+				// Calcula pontuação
 				const totalQuestions = questions.length
 				let totalCorrectAnswers = 0
 				questions.map(q => {
@@ -331,7 +357,7 @@
 
 
 		$(document).ready(function () {
-			console.log(questions.length)
+			console.log('total de questoes', questions.length)
 			getQuestion(0)
 			$("#prevBtn").removeClass("btn-success").addClass("btn-secondary");
 			actualQuestion.id = questions[0].id

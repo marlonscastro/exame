@@ -1,0 +1,29 @@
+let questions = [
+    {
+        id: 101,
+        type: "mc",
+        text: "Você tem dois hosts Hyper-V chamados Host1 e Host2. Host1 possui uma máquina virtual Azure chamada VM1 que foi implantada usando um recurso Azure personalizado\
+Modelo gerente.\
+Você precisa mover VM1 para Host2.\
+O que você deve fazer?",
+        alternatives: [
+            { description: "A: Na lâmina de gerenciamento de atualização, clique em Habilitar.", correct: false },
+            { description: "B: Da lâmina Visão geral, mova a VM1 para uma assinatura diferente.", correct: false },
+            { description: "C: A partir da lâmina Redeploy, clique em Redeploy.", correct: true },
+            { description: "D: A partir da lâmina Perfil, modifique o local de uso.", correct: false }
+        ]
+    },
+    {
+        id: 112,
+        type: "mm",
+        text: "Você está criando um cofre de chaves do Azure usando o PowerShell. Objetos excluídos do cofre de chaves devem ser mantidos por um período definido de 90 dias.\
+        <br>Quais dois dos seguintes parâmetros devem ser usados ​​em conjunto para atender ao requisito? (Escolha dois.)",
+        alternatives: [
+            { description: "A: EnabledForDeployment", correct: false },
+            { description: "B: EnablePurgeProtection", correct: true },
+            { description: "C: EnabledForTemplateDeployment", correct: false },
+            { description: "D: EnableSoftDelete", correct: true }
+        ]
+    },    
+
+]
