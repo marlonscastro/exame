@@ -1216,5 +1216,718 @@ Selecione e coloque: <img src=\"examtopics_files/0000900001.jpg\"></img>",
             { description: "C. Código de resposta HTTP", correct: false },
             { description: "D. ID do inquilino", correct: false },
         ]
-    },                                              
+    },  
+    {
+        id: 438,
+        type: "mc",
+        text: "Uma equipe de desenvolvimento está criando uma nova API REST. A API armazenará dados no armazenamento de Blobs do Azure. Você planeja implantar a API no Azure App Service.\
+        Os desenvolvedores devem acessar a conta de armazenamento de Blobs do Azure para desenvolver a API pelos próximos dois meses. A conta de armazenamento de Blobs do Azure não deve ser acessível pelos desenvolvedores após o período de dois meses.\
+        Você precisa conceder aos desenvolvedores acesso à conta de armazenamento de Blobs do Azure.\
+        <br>O que você deve fazer?",
+        alternatives: [
+            { description: "A. Gere uma assinatura de acesso compartilhado (SAS) para a conta de armazenamento de Blobs do Azure e forneça a SAS a todos os desenvolvedores.", correct: true },
+            { description: "B. Crie e aplique uma nova política de gerenciamento de ciclo de vida para incluir um valor de data do último acesso. Aplique a política à conta de armazenamento do Azure Blob.", correct: false },
+            { description: "C. Forneça a todos os desenvolvedores a chave de acesso para a conta de armazenamento do Azure Blob. Atualize a API para incluir o carimbo de data/hora do Tempo Universal Coordenado (UTC) para o cabeçalho da solicitação.", correct: false },
+            { description: "D. Conceda a todos os desenvolvedores acesso à conta de armazenamento de Blobs do Azure atribuindo funções de controle de acesso baseado em função (RBAC).", correct: false },
+        ]
+    },
+    {
+        id: 444,
+        type: "mc",
+        text: "Você gerencia um aplicativo de processamento de dados que recebe solicitações de uma fila do Azure Storage.\
+        Você precisa gerenciar o acesso à fila. Você tem os seguintes requisitos:<br>\
+        ✑ Fornecer acesso à fila do Azure para outros aplicativos.<br>\
+        ✑ Garantir que você pode revogar o acesso à fila sem precisar regenerar as chaves da conta de armazenamento.<br>\
+        ✑ Especifique o acesso no nível da fila e não no nível da conta de armazenamento.<br><br>\
+        Qual tipo de assinatura de acesso compartilhado (SAS) você deve usar?",
+        alternatives: [
+            { description: "A. Serviço SAS com uma política de acesso armazenada", correct: true },
+            { description: "B. Conta SAS", correct: false },
+            { description: "C. Delegação de Usuário SAS", correct: false },
+            { description: "D. Serviço SAS com SAS ad hoc", correct: false },
+        ]
+    },
+    {
+        id: 446,
+        type: "mc",
+        text: "Você está construindo um aplicativo da Web que usa a plataforma de identidade da Microsoft para autenticação de usuário.\
+        Você está implementando a identificação de usuário para o aplicativo da Web.\
+        Você precisa recuperar uma reivindicação para identificar exclusivamente um usuário.<br>\
+        Qual tipo de reivindicação você deve usar?",
+        alternatives: [
+            { description: "A. aud", correct: false },
+            { description: "B. nonce", correct: false },
+            { description: "C. oid", correct: true },
+            { description: "D. idp", correct: false },
+        ]
+    }, 
+    {
+        id: 447,
+        type: "mc",
+        text: "Você está desenvolvendo uma Função do Azure que chama APIs externas fornecendo um token de acesso para a API. O token de acesso é armazenado em um segredo chamado token em um\
+        Azure Key Vault chamado mykeyvault.\
+        Você precisa garantir que a Função do Azure possa acessar o token. <br>\
+        Qual valor você deve armazenar na configuração do aplicativo Função do Azure?",
+        alternatives: [
+            { description: "A. KeyVault:mykeyvault;Secret:token", correct: false },
+            { description: "B. App:Settings:Secret:mykeyvault:token", correct: false },
+            { description: "C. AZUREKVCONNSTR_ https://mykeyveult.vault.ezure.net/secrets/token/", correct: false },
+            { description: "D. @Microsoft.KeyVault(SecretUri=https://mykeyvault.vault.azure.net/secrets/token/)", correct: true },
+        ]
+    },
+    {
+        id: 448,
+        type: "mc",
+        text: "Uma empresa mantém vários aplicativos web e móveis. Cada aplicativo usa provedores de identidade internos personalizados, bem como provedores de identidade social.\
+        Você precisa implementar o logon único (SSO) para todos os aplicativos.<br><br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Use o Azure Active Directory B2C (Azure AD B2C) com políticas personalizadas.", correct: true },
+            { description: "B. Use o Azure Active Directory B2B (Azure AD B2B) e habilite a colaboração externa.", correct: false },
+            { description: "C. Use o Azure Active Directory B2C (Azure AD B2C) com fluxos de usuários.", correct: false },
+            { description: "D. Use o Azure Active Directory B2B (Azure AD B2B).", correct: false },
+        ]
+    },  
+    {
+        id: 450,
+        type: "mc",
+        text: "Você está desenvolvendo um portal de usuário para uma empresa.\
+        Você precisa criar um relatório para o portal que liste informações sobre funcionários que são especialistas no assunto para um tópico específico. Você deve garantir que os administradores tenham controle total e consentimento sobre os dados.\
+        <br>Qual tecnologia você deve usar?",
+        alternatives: [
+            { description: "A. Conexão de dados do Microsoft Graph", correct: true },
+            { description: "B. API do Microsoft Graph", correct: false },
+            { description: "C. Conectores do Microsoft Graph", correct: false },
+        ]
+    },     
+    {
+        id: 455,
+        type: "mc",
+        text: "Você está desenvolvendo um aplicativo da Web que usa a plataforma de identidade da Microsoft para autenticação de usuários e recursos. O aplicativo da Web chama várias APIs REST.\
+        Uma chamada de API REST deve ler o calendário do usuário. O aplicativo da Web requer permissão para enviar um e-mail como o usuário.<br>\
+        Você precisa autorizar o aplicativo da Web e a API.<br>\
+        Qual parâmetro você deve usar?",
+        alternatives: [
+            { description: "A. tenant", correct: false },
+            { description: "B. code_challenge", correct: false },
+            { description: "C. state", correct: false },
+            { description: "D. client_id", correct: false },
+            { description: "E. scope", correct: true },
+        ]
+    },
+    {
+        id: 458,
+        type: "mc",
+        text: "Você desenvolve e implanta um aplicativo Web do Azure App Service chamado App1. Você cria um novo Azure Key Vault chamado Vault1. Você importa várias chaves de API, senhas, certificados e chaves criptográficas para o Vault1.\
+        Você precisa conceder acesso do App1 ao Vault1 e rotacionar credenciais automaticamente. <br>As credenciais não devem ser armazenadas em código.<br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Habilite a autenticação do App Service para Appl. Atribua uma função RBAC personalizada ao Vault1.", correct: false },
+            { description: "B. Adicione uma ligação TLS/SSL ao App1.", correct: false },
+            { description: "C. Carregue um certificado de cliente autoassinado no Vault1. Atualize o App1 para usar o certificado de cliente.", correct: false },
+            { description: "D. Atribua uma identidade gerenciada ao App1.", correct: true },
+        ]
+    },   
+    {
+        id: 459,
+        type: "mc",
+        text: "Você está desenvolvendo um aplicativo Java para ser implantado no Azure. O aplicativo armazena dados confidenciais no Azure Cosmos DB.\
+        Você precisa configurar o Always Encrypted para criptografar os dados confidenciais dentro do aplicativo.<br>\
+        O que você deve fazer primeiro?",
+        alternatives: [
+            { description: "A. Crie um novo contêiner para incluir uma política de criptografia com as propriedades JSON a serem criptografadas.", correct: false },
+            { description: "B. Crie uma chave gerenciada pelo cliente (CMK) e armazene a chave em uma nova instância do Azure Key Vault", correct: true },
+            { description: "C. Crie uma chave de criptografia de dados (DEK) usando o SDK do Azure Cosmos DB e armazene a chave no Azure Cosmos DB.", correct: false },
+            { description: "D. Crie uma identidade gerenciada do Azure AD e atribua a identidade a uma nova instância do Azure Key Vault.", correct: false },
+        ]
+    },     
+    {
+        id: 466,
+        type: "mc",
+        text: "Você está desenvolvendo várias APIs hospedadas do Azure API Management (APIM).\
+        Você deve transformar as APIs para ocultar informações privadas de backend e obscurecer a pilha de tecnologia usada para implementar o processamento de backend.\
+        <br>Você precisa proteger todas as APIs.\
+        <br>O que você deve fazer?",
+        alternatives: [
+            { description: "A. Configure e aplique uma nova política de entrada com escopo para um produto.", correct: false },
+            { description: "B. Configure e aplique uma nova política de saída com escopo para a operação.", correct: true },
+            { description: "C. Configure e aplique uma nova política de saída com escopo global.", correct: false },
+            { description: "D. Configurar e aplicar uma nova política de backend com escopo global.", correct: false },
+        ]
+    },  
+    {
+        id: 473,
+        type: "mc",
+        text: "Você está desenvolvendo um aplicativo que usa chaves armazenadas no Azure Key Vault.\
+        Você precisa impor um algoritmo criptográfico específico e um tamanho de chave para chaves armazenadas no vault.<br>\
+        O que você deve usar?",
+        alternatives: [
+            { description: "A. Secret versioning", correct: false },
+            { description: "B. Azure Policy", correct: true },
+            { description: "C. Key Vault Firewall", correct: false },
+            { description: "D. Access policies", correct: false },
+        ]
+    },  
+    {
+        id: 502,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada< pergunta da série contém uma solução exclusiva. Determine se a solução atende aos objetivos declarados.\
+        Você está desenvolvendo e implantando vários aplicativos da Web ASP.NET no Azure App Service. Você planeja salvar informações de estado de sessão e saída HTML.\
+        Você deve usar um mecanismo de armazenamento com os seguintes requisitos:<br>\
+        ✑ Compartilhar o estado da sessão em todos os aplicativos da Web ASP.NET.<br>\
+        ✑ Oferecer suporte ao acesso controlado e simultâneo aos mesmos dados de estado de sessão para vários leitores e um único gravador.<br>\
+        ✑ Salvar respostas HTTP completas para solicitações simultâneas.<br>\
+        Você precisa armazenar as informações.<br>\
+        <b>Solução proposta: habilitar o roteamento de solicitação de aplicativo (ARR).</b><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },                     
+    {
+        id: 503,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva. Determine se a solução atende aos objetivos declarados.\
+        Você está desenvolvendo e implantando vários aplicativos da Web ASP.NET no Azure App Service. Você planeja salvar informações de estado de sessão e saída HTML.\
+        Você deve usar um mecanismo de armazenamento com os seguintes requisitos:<br>\
+        ✑ Compartilhar o estado da sessão em todos os aplicativos da Web ASP.NET.<br>\
+        ✑ Oferecer suporte ao acesso controlado e simultâneo aos mesmos dados de estado de sessão para vários leitores e um único gravador.<br>\
+        ✑ Salvar respostas HTTP completas para solicitações simultâneas.<br>\
+        Você precisa armazenar as informações.<br>\
+        <b>Solução proposta: implantar e configurar um banco de dados do Azure para PostgreSQL. Atualizar os aplicativos da Web.</b><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    }, 
+    {
+        id: 507,
+        type: "mc",
+        text: "Você desenvolve uma solução de gateway para uma API de notícias voltada ao público. O back-end da API de notícias é implementado como um serviço RESTful e usa uma especificação OpenAPI.\
+        Você precisa garantir que pode acessar a API de notícias usando uma instância do serviço Azure API Management.\
+        <br><br>Qual comando do Azure PowerShell você deve executar?",
+        alternatives: [
+            { description: "A. Import-AzureRmApiManagementApi -Context $ApiMgmtContext -SpecificationFormat \"Swagger\" -SpecificationPath $SwaggerPath -Path $Path", correct: true },
+            { description: "B. New-AzureRmApiManagementBackend -Context $ApiMgmtContext -Url $Url -Protocol http", correct: false },
+            { description: "C. New-AzureRmApiManagement -ResourceGroupName $ResourceGroup -Name $Name Location $Location -Organization $Org -AdminEmail $AdminEmail", correct: false },
+            { description: "D. New-AzureRmApiManagementBackendProxy -Url $ApiUrl", correct: false },
+        ]
+    },    
+    {
+        id: 509,
+        type: "mc",
+        text: "Você está desenvolvendo uma função do Azure que se conecta a uma instância do Banco de Dados SQL do Azure. A função é acionada por uma fila do Armazenamento do Azure.\
+        Você recebe relatórios de vários System.InvalidOperationExceptions com a seguinte mensagem:<br>\
+        `Tempo limite expirado. O período de tempo limite expirou antes de obter uma conexão do pool. Isso pode ter ocorrido porque todas as conexões em pool estavam em uso e o tamanho máximo do pool foi atingido.`<br>\
+        <br>Você precisa evitar a exceção.\
+        <br>O que você deve fazer?",
+        alternatives: [
+            { description: "A. No arquivo host.json, diminua o valor da opção batchSize", correct: true },
+            { description: "B. Converter o gatilho para o Azure Event Hub", correct: false },
+            { description: "C. Converta a função do Azure para o plano Premium", correct: false },
+            { description: "D. No arquivo function.json, altere o valor da opção type para queueScaling", correct: false },
+        ]
+    },
+    {
+        id: 510,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva. Determine se a solução atende aos objetivos declarados.\
+        Você está desenvolvendo e implantando vários aplicativos da Web ASP.NET no Azure App Service. Você planeja salvar informações de estado de sessão e saída HTML. Você\
+        deve usar um mecanismo de armazenamento com os seguintes requisitos:<br>\
+        ✑ Compartilhar estado de sessão em todos os aplicativos da Web ASP.NET.<br>\
+        ✑ Oferecer suporte a acesso controlado e simultâneo aos mesmos dados de estado de sessão para vários leitores e um único gravador.<br>\
+        ✑ Salvar respostas HTTP completas para solicitações simultâneas.<br>\
+        Você precisa armazenar as informações.<br>\
+        <b>Solução proposta: implantar e configurar o Cache do Azure para Redis. Atualizar os aplicativos da Web.</b><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: true },
+            { description: "B. Não", correct: false },
+        ]
+    }, 
+    {
+        id: 515,
+        type: "mc",
+        text: "Você está desenvolvendo aplicativos para uma empresa. Você planeja hospedar os aplicativos no Azure App Services.\
+        A empresa tem os seguintes requisitos:<br>\
+        ✑ A cada cinco minutos, verifique se os sites são responsivos.<br>\
+        ✑ Verifique se os sites respondem dentro de um limite de tempo especificado. Solicitações dependentes, como imagens e arquivos JavaScript, devem ser carregadas corretamente.<br>\
+        ✑ Gere alertas se um site estiver com problemas.<br>\
+        ✑ Se um site não carregar, o sistema deve tentar recarregar o site mais três vezes.<br>\
+        Você precisa implementar esse processo com o mínimo de esforço.<br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Crie um teste web Selenium e configure-o para ser executado na sua estação de trabalho como uma tarefa agendada.", correct: false },
+            { description: "B. Configure um teste de ping de URL para consultar a página inicial. ", correct: true },
+            { description: "C. Crie uma função do Azure para consultar a página inicial.", correct: false },
+            { description: "D. Crie um teste web de várias etapas para consultar a página inicial.", correct: false },
+            { description: "E. Crie um teste de disponibilidade de faixa personalizado para consultar a página inicial.", correct: false },
+        ]
+    },   
+    {
+        id: 516,
+        type: "mc",
+        text: "Você desenvolve e adiciona várias funções a um aplicativo Azure Function que usa o host de tempo de execução mais recente. As funções contêm vários pontos de extremidade da API REST protegidos usando SSL. O aplicativo Azure Function é executado em um plano de Consumo.\
+        Você deve enviar um alerta quando qualquer um dos pontos de extremidade da função estiver indisponível ou respondendo muito lentamente.<br>\
+        Você precisa monitorar a disponibilidade e a capacidade de resposta das funções.<br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Crie um teste de ping de URL.", correct: false },
+            { description: "B. Crie uma função acionada por temporizador que chame TrackAvailability() e envie os resultados para o Application Insights.", correct: true },
+            { description: "C. Crie uma função acionada por temporizador que chame GetMetric(\"Request Size\") e envie os resultados para o Application Insights.", correct: false },
+            { description: "D. Adicione uma nova configuração de diagnóstico ao aplicativo Azure Function. Habilite as opções FunctionAppLogs e Send to Log Analytics.", correct: false },
+        ]
+    }, 
+    {
+        id: 528,
+        type: "mc",
+        text: "Uma organização hospeda aplicativos da Web no Azure. A organização usa o Azure Monitor.<br>\
+        Você descobre que alterações de configuração foram feitas em alguns dos aplicativos da Web.<br>\
+        Você precisa identificar as alterações de configuração.<br>\
+        Qual log do Azure Monitor você deve revisar?",
+        alternatives: [
+            { description: "A. AppServiceAppLogs", correct: false },
+            { description: "B. Logs de plataforma de ambiente de serviço de aplicativo", correct: true },
+            { description: "C. Logs do Console do Serviço de Aplicativo", correct: false },
+            { description: "D. Logs de auditoria do serviço de aplicativo", correct: false },
+        ]
+    }, 
+    {
+        id: 529,
+        type: "mc",
+        text: "Você desenvolve e implanta um aplicativo Web do Azure App Service em um ambiente de produção. Você habilita a configuração Always On e as extensões de site do Application Insights.<br><br>\
+        Você implanta uma atualização de código e recebe várias solicitações e exceções com falha no aplicativo Web.<br>\
+        Você precisa validar o desempenho e as contagens de falhas do aplicativo Web quase em tempo real.<br>\
+        Qual ferramenta do Application Insights você deve usar?",
+        alternatives: [
+            { description: "A. Profiler", correct: false },
+            { description: "B. Smart Detection", correct: false },
+            { description: "C. Live Metrics Stream", correct: true },
+            { description: "D. Application Map", correct: false },
+            { description: "E. Snapshot Debugger", correct: false },
+        ]
+    },  
+    {
+        id: 532,
+        type: "mc",
+        text: "Você está desenvolvendo um aplicativo da Web baseado no Azure. O aplicativo fica offline periodicamente para executar o processamento de dados offline. Enquanto o aplicativo está offline, vários alertas do Azure Monitor são disparados, o que resulta no pager do desenvolvedor de plantão.<br>\
+        O aplicativo deve sempre registrar quando o aplicativo estiver offline por qualquer motivo.<br>\
+        Você precisa garantir que o desenvolvedor de plantão não seja pager durante o processamento offline.<br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Adicione regras de processamento de alertas do Azure Monitor para suprimir notificações.", correct: true },
+            { description: "B. Desabilite os alertas de integridade do serviço Azure Monitor durante o processamento offline.", correct: false },
+            { description: "C. Crie um alerta de métrica do Azure Monitor.", correct: false },
+            { description: "D. Crie um grupo de ações do Azure Monitor que suprima os alertas.", correct: false },
+        ]
+    },                        
+    {
+        id: 533,
+        type: "mc",
+        text: "Você está desenvolvendo um jogo online que inclui um recurso que permite que os jogadores interajam com outros jogadores do mesmo time dentro de uma certa distância. O cálculo para determinar os jogadores no alcance ocorre quando os jogadores se movem e são armazenados em cache em uma instância do Azure Cache for Redis.\
+        O sistema deve priorizar os jogadores com base em quão recentemente eles se moveram e não deve priorizar os jogadores que saíram do jogo.<br>\
+        Você precisa selecionar uma política de despejo.<br>\
+        Qual política de despejo você deve usar?",
+        alternatives: [
+            { description: "A. allkeys-Iru", correct: false },
+            { description: "B. volatile-Iru", correct: true },
+            { description: "C. allkeys-lfu", correct: false },
+            { description: "D. volatile-ttl", correct: false },
+        ]
+    },    
+    {
+        id: 534,
+        type: "mc",
+        text: "Você desenvolve um aplicativo Web do Azure App Service e o implanta em um ambiente de produção. Você habilita o Application Insights para o aplicativo Web.\
+        O aplicativo Web está lançando várias exceções no ambiente.<br>\
+        Você precisa examinar o estado do código-fonte e das variáveis ​​quando as exceções são lançadas.<br>\
+        Qual recurso do Application Insights você deve configurar?",
+        alternatives: [
+            { description: "A. Smart detection", correct: false },
+            { description: "B. Profiler", correct: false },
+            { description: "C. Snapshot Debugger", correct: true },
+            { description: "D. Standard test", correct: false },
+        ]
+    },
+    {
+        id: 540,
+        type: "mc",
+        text: "Você está criando um aplicativo para rastrear torres de celular que estão disponíveis para telefones quase em tempo real. Um telefone enviará informações para o aplicativo usando o serviço Azure Web PubSub. Os dados serão processados ​​usando um aplicativo Azure Functions. O tráfego será transmitido usando uma rede de entrega de conteúdo (CDN).<br>\
+        A função do Azure deve ser protegida contra invocações mal configuradas ou não autorizadas.<br>\
+        Você precisa garantir que a CDN permita a proteção da função do Azure.<br>\
+        Qual cabeçalho HTTP deve estar na lista permitida?",
+        alternatives: [
+            { description: "A. Authorization", correct: false },
+            { description: "B. WebHook-Request-Callback", correct: false },
+            { description: "C. Resource", correct: false },
+            { description: "D. WebHook-Request-Origin", correct: true },
+        ]
+    }, 
+    {
+        id: 544,
+        type: "mc",
+        text: "Você tem uma instância de nível Standard do Azure API Management (APIM) chamada APIM1 que usa um gateway gerenciado.<br>\
+        Você planeja usar APIM1 para publicar uma API chamada API1 que usa um banco de dados de backend que suporta apenas um volume limitado de solicitações por minuto. Você também precisa de uma política para API1 que irá minimizar a possibilidade de que o número de solicitações para o banco de dados de backend de um endereço IP individual que você especificar exceda o limite suportado.<br>\
+        Você precisa identificar uma política para API1 que irá atender aos requisitos.<br>\
+        Qual política você deve usar?",
+        alternatives: [
+            { description: "A. ip-filter", correct: false },
+            { description: "B. quota-by-key", correct: false },
+            { description: "C. rate-limit-by-key", correct: true },
+            { description: "D. rate-limit", correct: false },
+        ]
+    },  
+    {
+        id: 545,
+        type: "mc",
+        text: "Você desenvolve um aplicativo da Web que vende acesso a vagas de última hora para acampamentos infantis que acontecem nos fins de semana. O aplicativo usa o Azure Application Insights para todos os alertas e monitoramentos.\
+        O aplicativo deve alertar os operadores quando um problema técnico estiver impedindo as vendas para os acampamentos.<br>\
+        Você precisa criar um alerta para detectar problemas técnicos.<br>\
+        Qual tipo de alerta você deve usar?",
+        alternatives: [
+            { description: "A. Alerta de métrica usando várias séries temporais", correct: false },
+            { description: "B. Alerta métrico usando limites dinâmicos", correct: true },
+            { description: "C. Alerta de log usando várias séries temporais", correct: false },
+            { description: "D. Alerta de log usando limites dinâmicos", correct: false },
+        ]
+    },
+    {
+        id: 601,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.<br><br>\
+        Você está desenvolvendo uma solução do Azure para coletar dados de dispositivos de ponto de venda (POS) de 2.000 lojas localizadas em todo o mundo. Um único dispositivo pode produzir 2 megabytes (MB) de dados a cada 24 horas. Cada local de loja tem de um a cinco dispositivos que enviam dados.<br>\
+        Você deve armazenar os dados do dispositivo no armazenamento de Blobs do Azure. Os dados do dispositivo devem ser correlacionados com base em um identificador de dispositivo. Espera-se que lojas adicionais sejam abertas no futuro.<br>\
+        Você precisa implementar uma solução para receber os dados do dispositivo.<br>\
+        <b>Solução: provisione um Barramento de Serviço do Azure. Configure um tópico para receber os dados do dispositivo usando um filtro de correlação.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },   
+    {
+        id: 602,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.<br>\
+        Você está desenvolvendo uma solução do Azure para coletar dados de dispositivos de ponto de venda (POS) de 2.000 lojas localizadas em todo o mundo. Um único dispositivo pode produzir 2 megabytes (MB) de dados a cada 24 horas. Cada local de loja tem de um a cinco dispositivos que enviam dados.<br>\
+        Você deve armazenar os dados do dispositivo no armazenamento de Blobs do Azure. Os dados do dispositivo devem ser correlacionados com base em um identificador de dispositivo. Espera-se que lojas adicionais sejam abertas no futuro.<br>\
+        Você precisa implementar uma solução para receber os dados do dispositivo.<br>\
+        <b>Solução: provisionar uma grade de eventos do Azure. Configurar a filtragem de eventos para avaliar o identificador do dispositivo.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    }, 
+    {
+        id: 607,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um aplicativo do Serviço do Azure que processa dados da fila quando recebe uma mensagem de um aplicativo móvel. As mensagens podem não ser enviadas ao serviço de forma consistente.\
+        Você tem os seguintes requisitos:<br>\
+        ✑ O tamanho da fila não deve crescer mais do que 80 gigabytes (GB).<br>\
+        ✑ Use a ordenação de mensagens primeiro a entrar, primeiro a sair (FIFO).<br>\
+        ✑ Minimize os custos do Azure.<br><br>\
+        Você precisa implementar a solução de mensagens.<br>\
+        <b>Solução: use a API .Net para adicionar uma mensagem a uma Fila de Armazenamento do Azure a partir do aplicativo móvel. Crie um Aplicativo de Função do Azure que use um\
+        gatilho de Fila de Armazenamento do Azure.</b><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },
+    {
+        id: 615,
+        type: "mc",
+        text: "Uma empresa está implementando um componente de mensagens de publicação-assinatura (Pub/Sub) usando o Azure Service Bus. Você está desenvolvendo o primeiro aplicativo de assinatura.\
+        No portal do Azure, você vê que as mensagens estão sendo enviadas para a assinatura para cada tópico. Você cria e inicializa um objeto de cliente de assinatura fornecendo os detalhes corretos, mas o aplicativo de assinatura ainda não está consumindo as mensagens.<br>\
+        Você precisa garantir que o cliente de assinatura processe todas as mensagens.<br>\
+        Qual segmento de código você deve usar?",
+        alternatives: [
+            { description: "A. await subscriptionClient.AddRuleAsync(new RuleDescription(RuleDescription.DefaultRuleName, new TrueFilter()));", correct: false },
+            { description: "B. subscriptionClient = new SubscriptionClient(ServiceBusConnectionString, TopicName, SubscriptionName);", correct: false },
+            { description: "C. await subscriptionClient.CloseAsync();", correct: false },
+            { description: "D. subscriptionClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions);", correct: true },
+        ]
+    },
+    {
+        id: 616,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um aplicativo do Serviço do Azure que processa dados da fila quando recebe uma mensagem de um aplicativo móvel. As mensagens podem não ser enviadas ao serviço de forma consistente.\
+        Você tem os seguintes requisitos:<br>\
+        ✑ O tamanho da fila não deve crescer mais do que 80 gigabytes (GB).<br>\
+        ✑ Use a ordenação de mensagens primeiro a entrar, primeiro a sair (FIFO).<br>\
+        ✑ Minimize os custos do Azure.<br>\
+        Você precisa implementar a solução de mensagens.<br>\
+        <b>Solução: use a API .Net para adicionar uma mensagem a uma Fila de Armazenamento do Azure a partir do aplicativo móvel. Crie uma VM do Azure que seja acionada a partir de\
+        eventos da Fila de Armazenamento do Azure.</b><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    }, 
+    {
+        id: 617,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um aplicativo do Serviço do Azure que processa dados da fila quando recebe uma mensagem de um aplicativo móvel. As mensagens podem não ser enviadas ao serviço de forma consistente.\
+        Você tem os seguintes requisitos:<br>\
+        ✑ O tamanho da fila não deve crescer mais do que 80 gigabytes (GB).<br>\
+        ✑ Use a ordenação de mensagens primeiro a entrar, primeiro a sair (FIFO).<br>\
+        ✑ Minimize os custos do Azure.<br>\
+        Você precisa implementar a solução de mensagens.<br>\
+        <b>Solução: use a API .Net para adicionar uma mensagem a uma Fila do Barramento de Serviço do Azure a partir do aplicativo móvel. Crie uma VM do Windows do Azure que seja acionada a partir da\
+        Fila do Barramento de Serviço do Azure.</b><br>\
+        A solução atende ao objetivo?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    }, 
+    {
+        id: 622,
+        type: "mc",
+        text: "Você está criando um aplicativo que usará o CosmosDB para armazenamento de dados. O aplicativo processará lotes de dados relacionais.\
+        Você precisa selecionar uma API para o aplicativo.<br>\
+        Qual API você deve usar?",
+        alternatives: [
+            { description: "A. API do MongoDB", correct: false },
+            { description: "B. API de tabela", correct: false },
+            { description: "C. API SQL", correct: true },
+            { description: "D. API do Cassandra", correct: false },
+        ]
+    },     
+    {
+        id: 626,
+        type: "mc",
+        text: "Você está desenvolvendo uma solução de e-commerce que usa uma arquitetura de microsserviços.\
+        Você precisa projetar um backplane de comunicação para comunicar mensagens transacionais entre várias partes da solução. As mensagens devem ser comunicadas na ordem primeiro a entrar, primeiro a sair (FIFO).\
+        <br>O que você deve usar?",
+        alternatives: [
+            { description: "A. Fila de armazenamento do Azure", correct: false },
+            { description: "B. Hub de eventos do Azure", correct: false },
+            { description: "C. Barramento de Serviço do Azure", correct: true },
+            { description: "D. Grade de eventos do Azure", correct: false },
+        ]
+    },     
+    {
+        id: 628,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está desenvolvendo um aplicativo de serviço do Azure que processa dados de fila quando recebe uma mensagem de um aplicativo móvel. As mensagens podem não ser enviadas ao serviço de forma consistente.\
+        Você tem os seguintes requisitos:<br>\
+        ✑ O tamanho da fila não deve crescer mais do que 80 gigabytes (GB).<br>\
+        ✑ Use a ordenação de mensagens primeiro a entrar, primeiro a sair (FIFO).<br>\
+        ✑ Minimize os custos do Azure.<br>\
+        Você precisa implementar a solução de mensagens.<br>\
+        <b>Solução: use a API .Net para adicionar uma mensagem a uma fila do Azure Service Bus a partir do aplicativo móvel. Crie um aplicativo de função do Azure que use um gatilho de fila do Azure\
+        Service Bus.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: true },
+            { description: "B. Não", correct: false },
+        ]
+    },   
+    {
+        id: 629,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.<br>\
+        Você está desenvolvendo uma solução do Azure para coletar dados de dispositivos de ponto de venda (POS) de 2.000 lojas localizadas em todo o mundo. Um único dispositivo pode produzir 2 megabytes (MB) de dados a cada 24 horas. Cada local de loja tem de um a cinco dispositivos que enviam dados.<br>\
+        Você deve armazenar os dados do dispositivo no armazenamento de Blobs do Azure. Os dados do dispositivo devem ser correlacionados com base em um identificador de dispositivo. Espera-se que lojas adicionais sejam abertas no futuro.<br>\
+        Você precisa implementar uma solução para receber os dados do dispositivo.<br>\
+        <b>Solução: provisione um Hub de Notificação do Azure. Registre todos os dispositivos no hub.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },
+    {
+        id: 630,
+        type: "mc",
+        text: "Você está criando um programa de fidelidade para um grande produtor de salgadinhos. Quando os clientes compram um salgadinho em qualquer um dos 100 varejistas participantes, o evento é registrado no Azure\
+        Event Hub. <br>\
+        Cada varejista recebe um identificador exclusivo que é usado como o identificador principal para o programa de fidelidade.<br>\
+        Os varejistas devem poder ser adicionados ou removidos a qualquer momento. Os varejistas devem poder registrar as vendas apenas para si mesmos.<br>\
+        Você precisa garantir que os varejistas possam registrar as vendas.<br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Use políticas do editor para varejistas.", correct: true },
+            { description: "B. Crie uma partição para cada varejista.", correct: false },
+            { description: "C. Defina um namespace para cada varejista.", correct: false },
+        ]
+    }, 
+    {
+        id: 633,
+        type: "mc",
+        text: "Você está desenvolvendo um aplicativo de rastreamento de pedágio rodoviário que envia eventos de rastreamento usando o Azure Event Hubs usando o nível premium.\
+        Cada estrada deve ter uma política de limitação atribuída exclusivamente.<br>\
+        Você precisa configurar o hub de eventos para permitir a limitação por estrada.<br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Use um grupo de consumidores exclusivo para cada estrada.", correct: false },
+            { description: "B. Garanta que cada estrada armazene eventos em uma partição diferente.", correct: false },
+            { description: "C. Certifique-se de que cada estrada tenha uma sequência de conexão exclusiva.", correct: false },
+            { description: "D. Use um grupo de aplicativos exclusivo para cada estrada.", correct: true },
+        ]
+    },  
+    {
+        id: 635,
+        type: "mc",
+        text: "Você está criando um aplicativo da Web B2B que usa a colaboração B2B do Azure para autenticação. Os clientes pagantes autenticam-se no Azure B2B usando federação.\
+        O aplicativo permite que os usuários se inscrevam em contas de teste usando qualquer endereço de e-mail.<br>\
+        Quando um usuário se converte em um cliente pagante, os dados associados ao teste devem ser mantidos, mas o usuário deve se autenticar usando federação.<br>\
+        Você precisa atualizar o usuário no Azure Active Directory (Azure AD) quando ele se converte em um cliente pagante.<br>\
+        Qual parâmetro da Graph API é usado para alterar a autenticação de senhas únicas para federação?",
+        alternatives: [
+            { description: "A. resetRedemption", correct: true },
+            { description: "B. Status", correct: false },
+            { description: "C. userFlowType", correct: false },
+            { description: "D. invitedUser", correct: false },
+        ]
+    },
+    {
+        id: 643,
+        type: "mc",
+        text: "Você está desenvolvendo várias APIs hospedadas do Azure API Management (APIM).<br>\
+        As APIs têm os seguintes requisitos:<br><br>\
+        • Exigir uma chave de assinatura para acessar todas as APIs.<br>\
+        • Incluir termos de uso que os assinantes devem aceitar para usar as APIs.<br>\
+        • Os administradores devem revisar e aceitar ou rejeitar tentativas de assinatura.<br>\
+        • Limitar a contagem de várias assinaturas simultâneas.<br><br>\
+        Você precisa implementar as APIs.<br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Configure e aplique o controle de versão baseado em cabeçalho.", correct: false },
+            { description: "B. Criar e publicar um produto.", correct: true },
+            { description: "C. Configurar e aplicar o controle de versão baseado em sequência de consulta.", correct: false },
+            { description: "D. Adicione uma nova revisão a todas as APIs. Torne as revisões atuais e adicione uma entrada de log de alterações.", correct: false },
+        ]
+    },  
+    {
+        id: 650,
+        type: "mc",
+        text: "Você está desenvolvendo várias APIs hospedadas do Azure API Management (APIM).<br>\
+        Você deve fazer várias alterações pequenas e não destrutivas em uma das APIs. As alterações da API incluem os seguintes requisitos:<br><br>\
+        • Não deve interromper os chamadores da API.<br>\
+        • Habilite a reversão se encontrar problemas.<br>\
+        • Documentado para permitir que os desenvolvedores entendam o que há de novo.<br>\
+        • Testado antes da publicação.<br><br>\
+        Você precisa atualizar a API.<br>\
+        O que você deve fazer?",
+        alternatives: [
+            { description: "A. Configure e aplique o controle de versão baseado em cabeçalho.", correct: false },
+            { description: "B. Criar e publicar um produto.", correct: false },
+            { description: "C. Configure e aplique uma política personalizada.", correct: false },
+            { description: "D. Adicione uma nova revisão à API.", correct: true },
+            { description: "E. Configurar e aplicar o controle de versão baseado em sequência de consulta.", correct: false },
+        ]
+    },
+    {
+        id: 656,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está implementando um aplicativo usando o Azure Event Grid para enviar informações quase em tempo real aos clientes.<br><br>\
+        Você tem os seguintes requisitos<br>:\
+        • Você deve enviar eventos para milhares de clientes que incluem centenas de vários tipos de eventos.<br>\
+        • Os eventos devem ser filtrados por tipo de evento antes do processamento.<br>\
+        • A autenticação e a autorização devem ser manipuladas usando o Microsoft Entra ID.<br>\
+        • Os eventos devem ser publicados em um único ponto de extremidade.<br>\
+        Você precisa implementar o Azure Event Grid.<br><br>\
+        <b>Solução: publique eventos em um domínio de eventos. Crie um tópico personalizado para cada cliente.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: true },
+            { description: "B. Não", correct: false },
+        ]
+    },
+    {
+        id: 657,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está implementando um aplicativo usando o Azure Event Grid para enviar informações quase em tempo real aos clientes.<br><br>\
+        Você tem os seguintes requisitos<br>:\
+        • Você deve enviar eventos para milhares de clientes que incluem centenas de vários tipos de eventos.<br>\
+        • Os eventos devem ser filtrados por tipo de evento antes do processamento.<br>\
+        • A autenticação e a autorização devem ser manipuladas usando o Microsoft Entra ID.<br>\
+        • Os eventos devem ser publicados em um único ponto de extremidade.<br>\
+        Você precisa implementar o Azure Event Grid.<br><br>\
+        <b>Solução: publique eventos em um tópico personalizado. Crie uma assinatura de evento para cada cliente.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: true },
+            { description: "B. Não", correct: false },
+        ]
+    }, 
+    {
+        id: 658,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está implementando um aplicativo usando o Azure Event Grid para enviar informações quase em tempo real aos clientes.<br><br>\
+        Você tem os seguintes requisitos<br>:\
+        • Você deve enviar eventos para milhares de clientes que incluem centenas de vários tipos de eventos.<br>\
+        • Os eventos devem ser filtrados por tipo de evento antes do processamento.<br>\
+        • A autenticação e a autorização devem ser manipuladas usando o Microsoft Entra ID.<br>\
+        • Os eventos devem ser publicados em um único ponto de extremidade.<br>\
+        Você precisa implementar o Azure Event Grid.<br><br>\
+        <b>Solução: habilite a entrada, crie uma regra de escala TCP e aplique a regra ao aplicativo de contêiner.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },
+    {
+        id: 660,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está implementando um aplicativo usando o Azure Event Grid para enviar informações quase em tempo real aos clientes.<br><br>\
+        Você tem os seguintes requisitos<br>:\
+        • Você deve enviar eventos para milhares de clientes que incluem centenas de vários tipos de eventos.<br>\
+        • Os eventos devem ser filtrados por tipo de evento antes do processamento.<br>\
+        • A autenticação e a autorização devem ser manipuladas usando o Microsoft Entra ID.<br>\
+        • Os eventos devem ser publicados em um único ponto de extremidade.<br>\
+        Você precisa implementar o Azure Event Grid.<br><br>\
+        <b>Solução: publique eventos em um tópico de parceiro. Crie uma assinatura de evento para cada cliente.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },
+    {
+        id: 661,
+        type: "mc",
+        text: "Observação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que pode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\
+        Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\
+        Você está implementando um aplicativo usando o Azure Event Grid para enviar informações quase em tempo real aos clientes.<br><br>\
+        Você tem os seguintes requisitos<br>:\
+        • Você deve enviar eventos para milhares de clientes que incluem centenas de vários tipos de eventos.<br>\
+        • Os eventos devem ser filtrados por tipo de evento antes do processamento.<br>\
+        • A autenticação e a autorização devem ser manipuladas usando o Microsoft Entra ID.<br>\
+        • Os eventos devem ser publicados em um único ponto de extremidade.<br>\
+        Você precisa implementar o Azure Event Grid.<br><br>\
+        <b>Solução: publique eventos em um tópico do sistema. Crie uma assinatura de evento para cada cliente.</b><br>\
+        A solução atende à meta?",
+        alternatives: [
+            { description: "A. Sim", correct: false },
+            { description: "B. Não", correct: true },
+        ]
+    },                                        
 ]
